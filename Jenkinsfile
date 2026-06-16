@@ -7,7 +7,7 @@ pipeline {
 
         stage('Build docker image') {
             steps {  
-                sh 'docker build -t karimsahebettaba/formation-12062026:$BUILD_NUMBER .'
+                sh 'docker build -t kaiser322/formation_test:$BUILD_NUMBER .'
             }
         }
         stage('login to dockerhub') {
@@ -17,7 +17,7 @@ pipeline {
         }
         stage('push image') {
             steps{
-                sh 'docker push karimsahebettaba/formation-12062026:$BUILD_NUMBER'
+                sh 'docker push kaiser322/formation_test:$BUILD_NUMBER'
             }
         }
 }
